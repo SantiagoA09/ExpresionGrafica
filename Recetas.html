@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web de Recetas</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="Recetas.html">
+                <img src="Imagenes/logo3.png" alt="Logo de Cocina Viva" class="logo-img">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="Recetas.html" class="active">Inicio</a></li>
+                <li><a href="coleccion.html">Colección de Recetas Populares</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="festividades.html">Festividades</a></li>
+                <li><a href="nutricionales.html">Nutricionales</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recetas-destacadas">
+            <h2>Recetas Destacadas</h2>
+            <p>¡Aquí encontrarás toda la información acerca de las mejores recetas para compartir!</p>
+
+            <div class="carrusel-contenedor">
+                <button class="carrusel-btn" onclick="anterior()"><</button>
+                <div class="carrusel-item">
+                    <img id="carrusel-imagen" src="" alt="">
+                    <div class="carrusel-info">
+                        <h3 id="carrusel-titulo"></h3>
+                        <p id="carrusel-desc"></p>
+                        <a id="carrusel-enlace" href="#" target="_blank" class="btn-ver-receta">Ver Receta</a>
+                    </div>
+                </div>
+                <button class="carrusel-btn" onclick="siguiente()">></button>
+            </div>
+        </section>
+
+        <section class="recetas-coleccion">
+            <h3>Colección de Recetas Populares</h3>
+            <div class="recetas-listado">
+                <div class="receta-item">
+                    <h4>Pasta Carbonara</h4>
+                    <ul>
+                        <li>La auténtica receta italiana</li>
+                    </ul>
+                    <h4>Tacos al Pastor</h4>
+                    <ul>
+                        <li>Carne marinada con achiote y piña, servida en tortillas de maíz</li>
+                    </ul>
+                    <h4>Arepas rellenas</h4>
+                    <ul>
+                        <li>Clásicas arepas colombianas con queso derretido</li>
+                    </ul>
+                    <!--button class="btn-detalles">Ver detalles</button-->
+                </div>
+            </div>
+        </section>
+
+        <section class="recetas-categorias">
+            <h3>Recetas por Categorías</h3>
+            <div class="categoria-listado">
+                <div class="categoria-item">
+                    <h4>Entradas</h4>
+                    <h4>Platos Principales</h4>
+                    <h4>Postres</h4>
+                    <h4>Bebidas</h4>
+                    <p>Las mejores recetas organizadas por tipo de comida.</p>                    
+                    <!--button class="btn-detalles">Ver detalles</button-->
+
+                </div>
+            </div>
+        </section>
+
+        <section class="recetas-festividades">
+            <h3>Recetas por Festividades</h3>
+            <div class="categoria-listado">
+                <div class="categoria-item">
+                    <h4>Navidad</h4>
+                    <h4>Año Nuevo</h4>
+                    <h4>Halloween</h4>
+                    <p>Las mejores recetas para celebrar con sabor.</p>
+                    <!--button class="btn-detalles">Ver detalles</button-->
+
+                </div>
+            </div>
+        </section>
+
+        <section class="recetas-nutricionales">
+            <h3>Recetas Nutricionales</h3>
+            <div class="categoria-listado">
+                <div class="categoria-item">
+                    <h4>Sin Azúcar</h4>
+                    <h4>Sin Gluten</h4>
+                    <h4>Ricas en Proteínas</h4>
+                    <p>Recetas para disfrutar sin culpa.</p>
+                    <!--button class="btn-detalles">Ver detalles</button-->
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cocina Viva!</p>
+        <div class="redes-contacto">
+            <p>Síguenos en redes sociales:</p>
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+
+            <p>Contacto: <a href="mailto:santiago.gomez09@uptc.edu.co">santiago.o@uptc.edu.co</a></p>
+            <p>Contacto: <a href="mailto:sara.ferrucho@uptc.edu.co">sara.ferrucho@uptc.edu.co</a></p>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <section class="contacto">
+            <h3>Contacto</h3>
+            <p>¿Quieres recibir más información o dejarnos un mensaje? Completa el siguiente formulario:</p>
+            <form action="enviar_formulario.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit" id="sendButton">Enviar</button>
+            </form>
+        </section>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>
